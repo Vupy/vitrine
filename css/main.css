@@ -23,6 +23,11 @@ body, html, div.app{
     height: 100%;
 }
 
+a{
+    color: #e7002a;
+    text-decoration: none;
+}
+
 span.reds{
     color: #e7002a;
 }
@@ -32,6 +37,14 @@ nav{
     height: 4rem;
     padding: .5rem;
     position: fixed;
+    transition: 0.2s ease-in-out;
+    background-color: transparent;
+    z-index: 500;
+}
+
+nav.fullcolor{
+    background-color: white;
+    box-shadow: 0 1px 10px -4px rgba(0, 0, 0, .2);
 }
 
 nav img {
@@ -75,3 +88,27 @@ div.intro{
     padding: 2rem;
 }
 
+div.pad{
+    padding: 2rem;
+}
+
+div.release{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    margin-top: .5rem;
+    border-radius: 5rem;
+}
+
+div.release::before{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    display: block;
+    left: 1rem;
+    background-color: #e7002a;
+}
