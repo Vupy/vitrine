@@ -18,7 +18,7 @@
     background-color: #e7002a;
 }
 
-body, html, div.app{
+html, body, div.app{
     width: 100%;
     height: 100%;
 }
@@ -32,6 +32,37 @@ span.reds{
     color: #e7002a;
 }
 
+.redsama{
+    background-color: #e7002a;
+    color: #fff;
+}
+
+.greensama{
+    background-color: #00e74d;
+    color: #fff;
+}
+
+.yellowsama{
+    background-color: #f1ff31;
+    color: #000;
+    font-weight: 600;
+}
+
+.bluesama{
+    background-color: #0064e7;
+    color: #fff;
+}
+
+.blacksama{
+    background-color: #1f1f1f;
+    color: #fff;
+}
+
+.purplesama{
+    background-color: #5a0494;
+    color: #fff;
+}
+
 nav{
     width: 100%;
     height: 4rem;
@@ -42,7 +73,7 @@ nav{
     z-index: 500;
 }
 
-nav.fullcolor{
+nav.fullcolor, nav.hyper{
     background-color: white;
     box-shadow: 0 1px 10px -4px rgba(0, 0, 0, .2);
 }
@@ -67,6 +98,11 @@ div.capehills{
 
 div.capehills h1{
     margin-bottom: 1rem;
+    text-align: center;
+}
+
+div.capehills h3{
+    text-align: center;
 }
 
 div.objective{
@@ -101,14 +137,82 @@ div.release{
     position: relative;
     margin-top: .5rem;
     border-radius: 5rem;
+    padding-left: 3rem;
 }
 
 div.release::before{
     content: '';
     position: absolute;
-    width: 5px;
+    width: 3px;
     height: 100%;
     display: block;
-    left: 1rem;
+    left: 2rem;
     background-color: #e7002a;
+}
+
+div.warning{
+    width: 100%;
+    position: absolute;
+    left: 0rem;
+    top: 4rem;
+    padding: 1rem;
+    /* background-color: #e7002a; */
+    animation: 1s likecolor ease-in-out infinite alternate;
+    color: white;
+}
+
+div.notes{
+    padding: 2rem;
+    padding-top: 12rem;
+    padding-right: 3rem;
+}
+
+div.badge{
+    padding: .25rem;
+    border-radius: 8px;
+    max-width: max-content;
+    font-size: .75rem;
+    margin-right: .25rem;
+}
+
+div.badges{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+
+div.date{
+    color: rgb(58, 58, 58);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+div.notes div.item{
+    margin-bottom: 2rem;
+}
+
+@keyframes likecolor{
+    to{
+        background-color: #e7002a;
+    }
+    from{
+        background-color: rgb(240, 64, 73);
+    }
+}
+
+@media only screen and (max-width: 768px){
+    div.capehills{
+        background-position: right;
+    }
+}
+
+@media only screen and (max-width: 520px){
+    div.objective{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    div.capehills{
+        padding: 1rem;
+    }
 }
